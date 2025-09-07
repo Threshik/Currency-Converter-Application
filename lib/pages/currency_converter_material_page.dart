@@ -46,17 +46,18 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextButton(
+              child: ElevatedButton(
                 onPressed: () {
                   debugPrint("Button clicked");
                 },
                 style:  const ButtonStyle(
+                  elevation: WidgetStatePropertyAll(10),
                   backgroundColor: WidgetStatePropertyAll(Colors.black),
                   foregroundColor: WidgetStatePropertyAll(Colors.white),
                   minimumSize: WidgetStatePropertyAll(Size(double.infinity,50)),
                   textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
                   //by default it gives RoundedRectangleBorder so making is less
-                  shape: WidgetStatePropertyAll(RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(5))))
+                  shape: WidgetStatePropertyAll(RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(10))))
                 ),
                 child: Text("Convert"),
               ),
