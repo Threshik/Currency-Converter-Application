@@ -8,18 +8,18 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
     const border = OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
       borderSide: BorderSide(
-        color: Colors.black54,
+        color: Colors.black,
         width: 2.0,
         style: BorderStyle.solid,
       ),
     );
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               '0',
               style: TextStyle(
                 fontSize: 50,
@@ -28,8 +28,8 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
+              padding: const EdgeInsets.all(8.0),
+              child: const TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   hintText: "Please enter the value in INR",
@@ -44,6 +44,34 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                 keyboardType: TextInputType.number,
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {
+                  debugPrint("Button clicked");
+                },
+                style:  const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.black),
+                  foregroundColor: WidgetStatePropertyAll(Colors.white),
+                  minimumSize: WidgetStatePropertyAll(Size(double.infinity,50)),
+                  textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                  //by default it gives RoundedRectangleBorder so making is less
+                  shape: WidgetStatePropertyAll(RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(5))))
+                ),
+                child: Text("Convert"),
+              ),
+            ),
+            // MaterialButton(
+            //   color: const Color.fromARGB(255, 124, 177, 204),
+            //   padding: EdgeInsets.all(10),
+            //   shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(5)),
+            //   onPressed: (){
+
+            // },
+            //   child: Text("Convert",style: TextStyle(
+            //     color: Colors.white,
+            //   ),)
+            // )
           ],
         ),
       ),
