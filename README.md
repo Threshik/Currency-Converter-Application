@@ -11,6 +11,13 @@ Built with Flutter’s Material Design, the app provides a clean and responsive 
 - Responsive design for mobile devices  
 
 ---
+## 🛠️ Technologies Used
+
+- **Flutter**: Cross-platform mobile development framework
+- **Dart**: Programming language
+- **Material Design**: UI components and design system
+
+---
 
 ## 🚀 Getting Started
 
